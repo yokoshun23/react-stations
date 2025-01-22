@@ -1,6 +1,8 @@
 export const DogImage = (props) => {
   return (
-      <img src={props.imageUrl} alt="dog" />
+    <>
+      <img src={props.dogUrl} alt="cute dog"/>
+    </>
   )
 }
 

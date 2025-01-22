@@ -1,19 +1,20 @@
 // DO NOT DELETE
 
 import './App.css'
-import { Header } from './Header'
-import { Description } from './Description'
+import { useState } from 'react'
+import Header from './Header'
+import Description from './Description'
 import DogListContainer from './DogListContainer'
 
 /**
  * @type {() => JSX.Element}
  */
 export const App = () => {
-  return (
-    <React.Fragment>
-      <Header />
-      <Description />
-      <DogListContainer />
-    </React.Fragment>
+  return(
+    <div>
+      <Header/>
+      <Description/>
+      <DogListContainer/>
+    </div>
   )
 }

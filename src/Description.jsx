@@ -2,18 +2,19 @@ import { useState } from 'react'
 import DogImage from './DogImage'
 
 export const Description = () => {
-  const [dogUrl, setDogUrl] = useState('https://avatars.githubusercontent.com/u/9919?s=200&v=4')
-  const updateDogImage = () => {
-    fetch('https://dog.ceo/api/breeds/image/random')
-      .then(response => response.json())
-      .then(data => setDogUrl(data.message))
-  }
+  const [dogUrl, setDogUrl] = useState('https://images.dog.ceo/breeds/spaniel-brittany/n02101388_6057.jpg')
 
+  const dogAPI = () => {
+    fetch('https://dog.ceo/api/breeds/image/random')
+    .then((response) => response.json())
+    .then((data) => {setDogUrl(data.message)})
+  }
   return (
-    <React.Fragment>
-      <DogImage imageUrl={dogUrl} alt="cute dog"/>
-      <button onClick={updateDogImage}>更新</button>
-    </React.Fragment>
+    <div>
+      <p>犬の画像を表示するサイトです</p>
+      <DogImage dogUrl={dogUrl} alt="cute dog"/>
+      <button onClick={dogAPI}>更新</button>
+    </div>
   )
 }
 
