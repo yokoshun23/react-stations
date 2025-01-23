@@ -1,12 +1,8 @@
-import React from 'react'
-
-export const BreedsSelect = ({breeds, selectedBreed, onChange}) => {
+export const BreedsSelect = (props) => {
   return (
-    <select value={selectedBreed} onChange={onChange}>
-      {breeds.map((breed) => (
-        <option key={breed} value={breed}>
-          {breed}
-        </option>
+    <select name="breeds">
+      {props.breeds.map((item) => (
+        <option keys={item} value={item}>{item}</option>
       ))}
     </select>
   )

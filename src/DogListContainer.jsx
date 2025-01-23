@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react"
+import Description from "./Description";
+import BreedsSelect from "./BreedsSelect";
 
 export const DogListContainer = () => {
   const [breeds, setBreeds] = useState([]);
@@ -12,11 +14,9 @@ export const DogListContainer = () => {
   },[]);
 
   return (
-    <select name="breeds">
-      {breeds.map((item) => (
-        <option keys={item} value={item}>{item}</option>
-      ))}
-    </select>
+    <dev>
+      <BreedsSelect breeds={breeds}/>
+    </dev>
   )
 }
 
