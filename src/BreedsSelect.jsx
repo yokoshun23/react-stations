@@ -1,8 +1,8 @@
 export const BreedsSelect = (props) => {
   return (
-    <select name="breeds">
-      {props.breeds.map((item) => (
-        <option keys={item} value={item}>{item}</option>
+    <select name="breeds" value={props.selectedBreed} onChange={props.onChange}>
+      {props.breeds.map((breed) => (
+        <option key={breed} value={breed}>{breed}</option>
       ))}
     </select>
   )
